@@ -7,7 +7,7 @@ const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Меню</PanelHeader>
 		{fetchedUser &&
-		<Group header={<Header mode="secondary">User Data Fetched with VK Bridge</Header>}>
+		<Group header={<Header mode="secondary">Твоя страница</Header>}>
 			<Cell
 				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
 				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
@@ -16,7 +16,7 @@ const Home = ({ id, go, fetchedUser }) => (
 			</Cell>
 		</Group>}
 
-		<Group header={<Header mode="secondary">Navigation Example</Header>}>
+		<Group header={<Header mode="secondary">Жми на кнопку</Header>}>
 			<Div>
 				<Button stretched size="l" mode="secondary" onClick={go} data-to="persik">
 					Покажи персика
