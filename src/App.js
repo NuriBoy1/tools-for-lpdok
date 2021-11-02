@@ -36,7 +36,7 @@ const App = () => {
 		async function fetchData() {
 			const user = await bridge.send('VKWebAppGetUserInfo');
 			const storageData = await bridge.send('VKWebAppStorageGet',props:{
-				keys: Object.values(STORAGE_KEYS);
+				keys: Object.values(STORAGE_KEYS)
 			});
 			const data = {};
 			storageData.keys.forEach( ({ key, value}) =>{
