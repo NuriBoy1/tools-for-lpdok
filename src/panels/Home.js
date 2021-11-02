@@ -18,7 +18,7 @@ const Home = ({ id, go, fetchedUser }) => (
 
 		<Group header={<Header mode="secondary">Жми на кнопку</Header>}>
 			<Div>
-				<Button stretched size="l" mode="secondary" onClick={go} data-to="persik">
+				<Button stretched size="l" mode="secondary" onClick={go} data-to="Intro">
 					Покажи персика
 				</Button>
 			</Div>
