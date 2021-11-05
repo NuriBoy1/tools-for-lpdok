@@ -14,16 +14,16 @@ const ROUTES = {
 };
 
 const STORAGE_KEYS = {
-	STATUS: 'status'
+	STATUS: 'status',
 
 };
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState(ROUTES.INTRO);
-	const [fetchedUser, setUser] = useState(initialState: null);
+	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
-	const [userHasSeenIntro, setUserHasSeenIntro] = useState(initialState: false);
-	const [snackbar, setSnackbar] = useState(initialState: false);
+	const [userHasSeenIntro, setUserHasSeenIntro] = useState(false);
+	const [snackbar, setSnackbar] = useState(false);
 
 	useEffect(effect: () => {
 		bridge.subscribe(listener: ({ detail: { type:'VkWebAppInitFalled' | ..., data {...} | ... }}) => {
