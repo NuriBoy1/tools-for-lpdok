@@ -26,7 +26,7 @@ const App = () => {
 	const [snackbar, setSnackbar] = useState(initialState: false);
 
 	useEffect(effect: () => {
-		bridge.subscribe(listeler: ({ detail: { type:'VkWebAppInitFalled' | ..., data {...} | ... }}) => {
+		bridge.subscribe(listener: ({ detail: { type:'VkWebAppInitFalled' | ..., data {...} | ... }}) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute(localName: 'scheme');
 				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
@@ -55,7 +55,7 @@ const App = () => {
 				} catch(error) {
 					setSnackbar(<Snackbar
 							layout='vartical'
-							onClose={() => setSnackbar(null)}
+							onClose={() => setSnackbar(value: null)}
 							before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic-red)'}}
 							><Icon24Error fill='#ffff' width='14' height='14' /></Avatar>}
 							duration={900}
@@ -85,7 +85,7 @@ const App = () => {
 		} catch (error) {
 			setSnackbar(<Snackbar
 							layout='vartical'
-							onClose={() => setSnackbar(null)}
+							onClose={() => setSnackbar(value: null)}
 							before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic-red)'}}
 							><Icon24Error fill='#ffff' width='14' height='14' /></Avatar>}
 							duration={900}
