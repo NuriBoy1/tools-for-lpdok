@@ -14,7 +14,7 @@ const ROUTES = {
 };
 
 const STORAGE_KEYS = {
-	STATUS: 'status',
+	STATUS: 'status'
 
 };
 
@@ -34,7 +34,7 @@ const App = () => {
 			}
 		});
 		async function fetchData() {
-
+			const user = await bridge.send(method: 'VKWebAppGetUserInfo');
 			const storageData = await bridge.send(method: 'VKWebAppStorageGet', props:{
 				keys: Object.values(STORAGE_KEYS)
 			});
