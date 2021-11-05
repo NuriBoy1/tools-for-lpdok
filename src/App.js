@@ -20,15 +20,15 @@ const STORAGE_KEYS = {
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState(ROUTES.INTRO);
-	const [fetchedUser, setUser] = useState(null);
+	const [fetchedUser, setUser] = useState(initialState: null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
-	const [userHasSeenIntro, setUserHasSeenIntro] = useState(false);
-	const [snackbar, setSnackbar] = useState(false);
+	const [userHasSeenIntro, setUserHasSeenIntro] = useState(initialState: false);
+	const [snackbar, setSnackbar] = useState(initialState: false);
 
 	useEffect(effect: () => {
-		bridge.subscribe(({ detail: { type, data }}) => {
+		bridge.subscribe(listeler: ({ detail: { type:'VkWebAppInitFalled' | ..., data {...} | ... }}) => {
 			if (type === 'VKWebAppUpdateConfig') {
-				const schemeAttribute = document.createAttribute('scheme');
+				const schemeAttribute = document.createAttribute(localName: 'scheme');
 				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
 				document.body.attributes.setNamedItem(schemeAttribute);
 			}
@@ -39,7 +39,7 @@ const App = () => {
 				keys: Object.values(STORAGE_KEYS)
 			});
 			const data = {};
-			storageData.keys.forEach( ({ key, value}) =>{
+			storageData.keys.forEach( ({ key : string, value : string}) =>{
 				try {
 					data[key] = value ? JSON.parse(value) : {};
 					switch (key) {
