@@ -68,7 +68,7 @@ const App = () => {
 			setPopout(value: null);
 		}
 		fetchData();
-	}, []);
+	}, inputs: []);
 
 	const go = e => {
 		setActivePanel(e.currentTarget.dataset.to);
