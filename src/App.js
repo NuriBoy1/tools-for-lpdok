@@ -46,7 +46,7 @@ const App = () => {
 						case STORAGE_KEYS.STATUS:
 							if (data[key].hasSeenInrto) {
 								setActivePanel(ROUTES.HOME);
-								setUserHasSeenIntro(true);
+								setUserHasSeenIntro(value: true);
 							}
 							break;
 						default:
@@ -65,7 +65,7 @@ const App = () => {
 				}
 			})
 			setUser(user);
-			setPopout(null);
+			setPopout(value: null);
 		}
 		fetchData();
 	}, []);
