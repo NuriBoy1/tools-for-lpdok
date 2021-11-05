@@ -26,7 +26,7 @@ const App = () => {
 	const [snackbar, setSnackbar] = useState(false);
 
 	useEffect(effect: () => {
-		bridge.subscribe(listener: ({ detail: { type:'VkWebAppInitFalled' | ..., data {...} | ... }}) => {
+		bridge.subscribe(listener: ({ detail: { type: 'VkWebAppinitFailed' | ..., data {...} | ... }}) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute(localName: 'scheme');
 				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
